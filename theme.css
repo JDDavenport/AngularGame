@@ -1,0 +1,78 @@
+.Hone
+{
+	position: relative;
+	left: 40%;
+	
+	
+}
+h1
+{   border-radius: 25px;
+    padding: 20px; 
+	position: relative;
+	text-align: center;
+	height: 100px;
+	width: 300px;
+	background-color: lightblue;
+}
+body
+{   color: white;
+	background-image: url("http://jonvilma.com/images/beautiful-4.jpg");
+
+}
+#hangmanImg
+{
+
+}
+#img
+{   
+	border-radius: 25px;
+	background-color: lightblue; 
+	display: block;
+    margin-top: 300px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    padding: 15px;
+}
+.background
+{
+	border-radius: 25px;
+	background-color: lightblue; 
+	padding: 15px;
+}
+#guesses
+{
+	position: absolute;
+	background-color: red; 
+	top: 300px;
+	right: 46%;
+
+
+}
+#inguesses
+{
+	position: absolute;
+	background-color: red; 
+	top: 300px;
+	left: 15%;
+
+
+}
+#cguesses
+{
+	position: absolute;
+	background-color: red; 
+	top: 300px;
+	right: 15%;
+
+
+}
+#guess
+{
+	position: absolute;
+	top: 150px;
+	right: 44%;
+
+
+}
+

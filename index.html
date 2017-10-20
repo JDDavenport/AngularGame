@@ -4,30 +4,37 @@
 	<title>Hangman App</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
 	<script src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="theme.css">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 </head>
 <body ng-app="HangmanApp" ng-controller="GameController">
-<div>
-	<div>
-		Guesses left: {{guesses}}
-	</div>
-	<div>
-		Incorrect Guesses:<span ng-repeat="letter in incorrectLettersChosen">
-			{{letter}}
-		</span>
-	</div>
-	<div>
-		Correct Guesses:<span ng-repeat="letter in correctLettersChosen">
-			{{letter}}
-		</span>
-	</div>
-	<div>Guess the word: {{displayWord}}</div>
-	<div>
+	<div class="w3-animate-opacity">
+	<div class="Hone"><h1>Hang man</h1></div>
 		<div>
-		<input type="text" name='guess' ng-model='input.letter'>
-		<button ng-click='letterChosen()'>Submit</button>
+			<div class="background" id="guesses">
+				Guesses left: {{guesses}}
+			</div>
+		<div class="background" id="inguesses">
+			Incorrect Guesses:<span ng-repeat="letter in incorrectLettersChosen">
+			{{letter}}</span>
+		</div>
+		<div class="background" id="cguesses">
+			Correct Guesses:<span ng-repeat="letter in correctLettersChosen">
+			{{letter}}
+			</span>
+		</div>
+		<div  class="background" id="guess">
+		<div>Guess a letter: {{displayWord}}</div>
+		
+		<div>
+			<input type="text" name='guess' ng-model='input.letter'><br><br>
+			<button ng-click='letterChosen()'>Submit</button>
 		</div>		 	
+		</div>
+		<div id="hangmanImg">
+			<img id="img" ng-src="{{imgsrc}}"/>
+		</div>
+		</div>
 	</div>
-
-</div>
 </body>
 </html>

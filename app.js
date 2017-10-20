@@ -8,6 +8,7 @@ var app=angular.module("HangmanApp", [])
 	$scope.input = {
 		letter : ''
 	}
+	$scope.imgsrc="0.jpg"
 	var selectRandomWord =function(){
 		var index= Math.round(Math.random()*words.length)
 		return words[index];
@@ -27,6 +28,7 @@ var app=angular.module("HangmanApp", [])
 			Display += '*';
 		}
 		$scope.displayWord=Display;
+
 		
 	}
 	$scope.letterChosen =function(){
@@ -66,21 +68,43 @@ var app=angular.module("HangmanApp", [])
 		console.log($scope.input.letter);
 		$scope.input.letter="";
 		if($scope.guesses==0)
-		{
-			alert("You lost !")
+		{	$scope.imgsrc="death.jpg"
+			alert("You lost...")
 			$timeout(function(){
 				newGame();
+				$scope.imgsrc="0.jpg"
 
-			}, 500)
+			}, 3000)
 		}
 		if($scope.displayWord.indexOf('*')==-1)
 		{
-			alert("You Won !")
+			alert("You Won and saved a stick families life!")
 			$timeout(function(){
 				newGame();
 
 			}, 500)
 		}
+		if ($scope.guesses==5)
+		{
+			$scope.imgsrc="head.png"
+		}
+		if ($scope.guesses==4)
+		{
+			$scope.imgsrc="h+body.png"
+		}
+		if ($scope.guesses==3)
+		{
+			$scope.imgsrc="third.png"
+		}
+		if ($scope.guesses==2)
+		{
+			$scope.imgsrc="4.png"
+		}
+		if ($scope.guesses==1)
+		{
+			$scope.imgsrc="5.png"
+		}
+
 	}
 	newGame();
 	}])
