@@ -78,7 +78,7 @@ var app=angular.module("HangmanApp", [])
 		}
 		if($scope.displayWord.indexOf('*')==-1)
 		{
-			alert("You Won and saved a stick families life!")
+			alert("You Won and saved a stick mans life!")
 			$timeout(function(){
 				newGame();
 
